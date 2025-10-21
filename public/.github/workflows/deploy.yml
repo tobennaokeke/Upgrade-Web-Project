@@ -1,0 +1,22 @@
+# .github/workflows/deploy.yml
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Monitor the main branch for changes
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      # This uses a standard GitHub Action to deploy the content
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public  # <--- THIS IS THE CRITICAL LINE
+          publish_branch: gh-pages # Deploys to a separate branch (standard practice)
