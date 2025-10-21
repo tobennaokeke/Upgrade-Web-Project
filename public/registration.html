@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpGrade 2025</title>
+    <link rel="icon" href="/images/image 5.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="registration.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <a href="index.html"><img src="images/image 6.png" alt="home" class="h-logo"></a> </div>
+            
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <nav id="main-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="team.html" class="nav-link">Team</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="admin-login.html" class="nav-link">Admin</a>
+                <a href="registration.html" class="btn btn-register active">Register Now</a>
+            </nav>
+            </div>
+    </header>
+
+    <main class="registration-page">
+        <section class="header-section">
+            <div class="rocket-icon">🚀</div>
+            <h1>JOIN UPGRADE 2025</h1>
+            <p>Take the first step towards your empowered future</p>
+        </section>
+
+        <section class="what-you-get-box">
+            <h4>What You'll Get:</h4>
+            <ul class="benefit-list">
+                <li>6 weeks of intensive skills training</li>
+                <li>Expert mentorship from industry leaders</li>
+                <li>Entrepreneurship and business development workshops</li>
+                <li>Networking opportunities with peers and mentors</li>
+                <li>Empowerment seminar and certification</li>
+                <li>Access to ongoing support and resources</li>
+            </ul>
+        </section>
+
+        <div class="form-container">
+            <div class="form-header">
+                Registration Details
+            </div>
+            
+            <form class="registration-form">
+
+                <div class="form-group">
+                    <label for="full-name">Full Name *</label>
+                    <input type="text" id="full-name" name="fullName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phoneNumber" placeholder="+234 XXX XXX XXXX" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-method">Preferred Contact Method *</label>
+                    <select id="contact-method" name="contactMethod" required>
+                        <option value="" disabled selected>Choose your preferred contact method</option>
+                        <option value="whatsapp">Whatsapp</option>
+                        <option value="phone">Phone Call</option>
+                        <option value="sms">SMS</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="18">
+                </div>
+
+                <div class="form-group">
+                    <label for="skill-category">Skill Category *</label>
+                    <select id="skill-category" name="skillCategory" required>
+                        <option value="" disabled selected>Choose your skill track</option>
+                        <option value="web-design-dev">Web Design and Development</option>
+                        <option value="graphic-design-branding">Graphic Design and Branding</option>
+                        <option value="digital-marketing">Digital Marketing</option>
+                        <option value="ui-ux-design">UI/UX Design</option>
+                        <option value="data-analysis">Data Analysis</option>
+                        <option value="programming">Programming</option>
+                        <option value="wordpress-blogging">WordPress and Blogging</option>
+                        <option value="baking-pastry">Baking & Pastry (Cakes, Bread, Snacks)</option>
+                        <option value="small-chops">Small Chops Production</option>
+                        <option value="juice-smoothie">Juice & Smoothie Production</option>
+                        <option value="local-delicacies">Local Delicacies Preparation</option>
+                        <option value="food-packaging">Food Packaging</option>
+                        <option value="photography-editing">Photography & Photo Editing</option>
+                        <option value="cinematography-directing">Cinematography & Directing</option>
+                        <option value="content-creation">Content Creation for YouTube & TikTok</option>
+                        <option value="music-production">Music Production & Sound Engineering</option>
+                        <option value="acting-stage">Acting & Stage Performance</option>
+                        <option value="spoken-word">Spoken Word & Public Speaking</option>
+                        <option value="farming-poultry-fish">Farming, Poultry & Fish Farming</option>
+                        <option value="crop-production">Crop Production</option>
+                        <option value="packaging-marketing">Packaging and Marketing (Food)</option>
+                        <option value="fashion-tailoring">Fashion Design & Tailoring</option>
+                        <option value="shoe-bag-making">Shoe and Bag Making</option>
+                        <option value="bead-jewelry">Bead Making / Jewelry Craft</option>
+                        <option value="soap-detergent">Soap & Detergent Production</option>
+                        <option value="plumbing-pipefitting">Plumbing & Pipefitting</option>
+                        <option value="welding-fabrication">Welding & Fabrication</option>
+                        <option value="electrical-install">Electrical Installation</option>
+                        <option value="tiling-pop">Tiling & POP Design</option>
+                        <option value="painting-decor">Painting & Interior Decor</option>
+                        <option value="hairdressing-barbing">Hairdressing & Barbing</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Experience in selected skill *</label>
+                    <select id="experience" name="experience" required>
+                        <option value="beginner" selected>Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="e-status">Employment Status *</label>
+                    <select id="e-status" name="employmentStatus" required>
+                        <option value="" disabled selected>Employment Status</option>
+                        <option value="employed">Employed</option>
+                        <option value="unemployed">Unemployed</option>
+                        <option value="self-employed">Self Employed</option>
+                        <option value="undergraduate">Undergraduate</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="lecture-time">Best Time To Receive Lectures *</label>
+                    <select id="lecture-time" name="lectureTime" required>
+                        <option value="day" selected>Day</option>
+                        <option value="evening">Evening</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="lecture-method">Preferred Learning Method*</label>
+                    <select id="lecture-method" name="learningMethod" required>
+                        <option value="virtual" selected>Virtual</option>
+                        <option value="physical">Physical</option>
+                        <option value="hybrid">Hybrid</option>
+                    </select>
+                </div>
+
+                <div class="motivation">
+                    <label for="motivation">What is your motivation for learning this skill</label>
+                    <textarea id="motivation" name="motivation"></textarea>
+                </div>
+
+                <aside class="important-info">
+                    <h4>Important Information:</h4>
+                    <ul>
+                        <li>Registration closes on September 13, 2025</li>
+                        <li>Orientation is mandatory on September 13, 2025</li>
+                        <li>Program runs from September 15 - October 24, 2025</li>
+                        <li>Limited slots available per skill category</li>
+                    </ul>
+                </aside>
+
+                <button type="submit" class="submit-btn" id="submit-btn">
+                    Complete Registration
+                </button>
+            </form>
+
+
+            <p class="footer-note">By registering, you agree to participate fully in the 6-week program</p>
+
+        </div>
+
+    </main>
+
+       <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>UPGRADE 2025</h3>
+                <p class="footer-desc">Empowering youth through skills training, entrepreneurship, and purpose discovery. Join us on the journey to growth.</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="registration.html">Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-info">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Youth Alive Fellowship, Ikorodu Lagos</p>
+                <p><i class="fa-solid fa-envelope"></i> info@upgrade2025.org</p>
+                <p><i class="fa-solid fa-phone"></i> +2348060902334</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Upgrade 2025. All rights reserved. Youth Alive Fellowship Ikorodu Lagos.</p>
+            </div>
+        </div>
+
+        <a href="#" id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></a>
+    </footer>
+
+    
+    <script src="script.js"></script>
+    <script src="registration.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+/* admin-auth.css */
+
+/* --- ROOT Variables --- */
+:root {
+    --primary-green: #387b27;
+    --light-green: #6edb5c;
+    --yellow-bg: #ffcc00;
+    --border-color: #ddd;
+    --error-red: #cc0000;
+    --success-green: #28a745;
+    --loading-blue: #007bff;
+}
+
+/* --- Page and Wrapper Styles --- */
+/* body {
+    background-color: #f7f7f7;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+} */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.registration-page {
+    width: 100%;
+    max-width: 400px; /* Slimmer width for a clean login look */
+    margin: 100px auto;
+    background-color: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+    border-radius: 12px;
+    overflow: hidden; /* Contains the children elements nicely */
+}
+
+/* --- Header Section --- */
+.header-section {
+    text-align: center;
+    padding: 30px 0 10px;
+    background-color: var(--primary-green); /* Green background for header */
+    color: white;
+    border-radius: 12px 12px 0 0;
+}
+
+.rocket-icon {
+    font-size: 2.5em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.header-section h2 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+/* --- Form Styles --- */
+.auth-form {
+    padding: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+    font-size: 0.9em;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-sizing: border-box; 
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.2s;
+}
+
+.auth-form input[type="text"]:focus,
+.auth-form input[type="password"]:focus {
+    border-color: var(--primary-green);
+    outline: none;
+    box-shadow: 0 0 5px rgba(56, 123, 39, 0.3);
+}
+
+/* --- Submit Button --- */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #2e661f;
+    transform: translateY(-1px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+
+/* --- Message Area Styling (Success/Error/Loading) --- */
+.message-area {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    min-height: 40px; /* Reserve space to prevent layout shift */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-area.success {
+    background-color: #d4edda;
+    color: var(--success-green);
+    border: 1px solid #c3e6cb;
+}
+
+.message-area.error {
+    background-color: #f8d7da;
+    color: var(--error-red);
+    border: 1px solid #f5c6cb;
+}
+
+.message-area.loading {
+    background-color: #cce5ff;
+    color: var(--loading-blue);
+    border: 1px solid #b8daff;
+}
+
+/* 🚨 SECURITY FIX: The form-toggle styling is removed as the sign-up feature is disabled. */
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+    .registration-page {
+        margin: 20px;
+    }
+}

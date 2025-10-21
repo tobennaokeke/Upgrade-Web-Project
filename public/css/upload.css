@@ -1,0 +1,117 @@
+/* upload.css */
+
+/* Use your main theme colors from gallery.css/index.css */
+:root {
+    --primary-color: #4CAF50; /* Predominant Motivational Green */
+    --background-light: #f4f7f6;
+    --text-dark: #333;
+    --text-light: #fff;
+    --border-radius-lg: 12px;
+}
+
+.upload-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.upload-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.upload-section h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.upload-section p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+#imageUploadForm {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius-sm);
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.form-group small {
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 5px;
+}
+
+.btn-upload {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 10px;
+}
+
+.btn-upload:hover {
+    background-color: #43a047; /* Darker green on hover */
+    transform: translateY(-2px);
+}
+
+/* Message area for status updates */
+.message-area {
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: var(--border-radius-sm);
+    text-align: center;
+}
+
+/* Status colors (to be set by upload.js) */
+.message-area.success {
+    background-color: #e8f5e9;
+    color: var(--primary-color);
+}
+.message-area.error {
+    background-color: #ffebee;
+    color: #d32f2f;
+}
+.message-area.loading {
+    color: #1e88e5;
+}
+
+/* Footer Styling (assuming you have a main-footer in index.css) */
+.main-footer {
+    /* Ensure the footer is below the form, potentially with a margin/padding */
+    margin-top: 50px;
+}

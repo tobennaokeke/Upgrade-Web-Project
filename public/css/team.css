@@ -1,0 +1,223 @@
+/* --- Color Variables --- */
+:root {
+    --primary-green: #387b27;
+    --light-green-text: #6edb5c;
+    --yellow-bg: #ffcc00;
+    --dark-grey: #404040;
+    --light-grey: #666;
+    --bg-white: #ffffff;
+}
+
+/* --- Global Styles --- */
+body {
+    font-family: 'Poppins', sans-serif; /* Use a modern sans-serif font */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Light background for the overall page */
+}
+
+.page-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* --- 1. MEET OUR TEAM / HERO BANNER --- */
+.team-hero-banner {
+    /* Create the green-to-yellow gradient background */
+    background-image: linear-gradient(to right, #387b27, #f9e01f);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.team-hero-banner h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--bg-white);
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.team-hero-banner p {
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 10px auto 0;
+    max-width: 600px;
+}
+
+/* --- Section Headings --- */
+.content-section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-section h3 {
+    font-size: 2em;
+    font-weight: 800;
+    color: var(--dark-grey);
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    font-size: 1em;
+    color: var(--light-grey);
+    margin-bottom: 40px;
+}
+
+/* --- 2 & 3. Card Grid Layout (Speakers and Facilitators) --- */
+.cards-grid {
+    display: grid;
+    /* Create 2 columns for tablet/desktop view */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Space between cards */
+    padding: 0 10px;
+    text-align: left;
+}
+
+/* --- SPEAKER CARD STYLES --- */
+.speaker-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* Contains the absolute positioning */
+    position: relative;
+    padding: 20px;
+}
+
+.card-initials {
+    font-size: 7em;
+    font-weight: 900;
+    opacity: 0.1; /* Very faint initials */
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    z-index: 1;
+}
+
+/* Card Coloring and Text */
+.green-card .card-initials {
+    color: var(--primary-green);
+}
+.yellow-card .card-initials {
+    color: var(--yellow-bg);
+}
+
+.card-footer {
+    /* The colored bar at the bottom */
+    padding: 15px;
+    margin: -20px -20px 20px -20px; /* Pulls it to the edges */
+    z-index: 2;
+    position: relative; /* Stacks over initials */
+}
+
+.green-card .card-footer {
+    background-color: var(--primary-green);
+    color: var(--bg-white);
+}
+.yellow-card .card-footer {
+    background-color: var(--yellow-bg);
+    color: var(--dark-grey);
+}
+
+.card-footer h4 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.card-footer .role {
+    margin: 0;
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.card-details p {
+    font-size: 0.9em;
+    color: var(--light-grey);
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-right: 15px;
+    color: var(--light-grey); /* Neutral color for links */
+}
+
+/* --- FACILITATOR CARD STYLES --- */
+.facilitator-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.facilitator-card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 255, 34, 0.15);
+    border: 1px solid var(--primary-green)
+}
+
+.facilitator-card h4 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--dark-grey);
+    margin: 0 0 5px 0;
+}
+
+.facilitator-card .expertise {
+    font-size: 0.9em;
+    font-weight: 600;
+    /* Use the light green color for the expertise text */
+    color: var(--light-green-text); 
+    margin: 0 0 5px 0;
+}
+
+.facilitator-card .experience {
+    font-size: 0.8em;
+    color: var(--light-grey);
+    margin: 0;
+}
+
+
+/* --- 4. Start Your Journey Button --- */
+.start-journey-cta {
+    text-align: center;
+    padding: 40px 20px 80px;
+}
+
+.start-journey-cta button {
+    padding: 15px 30px;
+    border: 2px solid var(--yellow-bg);
+    background-color: var(--bg-white);
+    color: var(--dark-grey);
+    font-weight: 700;
+    font-size: 1.1em;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+}
+
+.start-journey-cta button:hover {
+    background-color: var(--yellow-bg);
+    color: var(--dark-grey);
+}
+
+/* --- Mobile Responsiveness (Less than 768px wide) --- */
+@media (max-width: 768px) {
+    .cards-grid {
+        /* On small screens, switch to a single column */
+        grid-template-columns: 1fr;
+    }
+}
+.spsim{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}

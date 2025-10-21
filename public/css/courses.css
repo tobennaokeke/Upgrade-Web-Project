@@ -1,0 +1,245 @@
+:root {
+    /* Define key colors for easy changes */
+    --primary-green: #38a565; /* A bright, solid green */
+    --secondary-yellow: #ffc94a; /* The yellow/orange register button color */
+    --text-dark: #333333;
+    --text-medium: #555555;
+    --card-border: #f0f0f0;
+    --background-light: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Section Title and Subtitle --- */
+.course-section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--text-medium);
+    margin-bottom: 40px;
+}
+
+/* --- Category Filter Buttons --- */
+.category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 1px solid var(--card-border);
+    border-radius: 25px;
+    background-color: white;
+    color: var(--text-medium);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.filter-btn i {
+    margin-right: 8px;
+    color: var(--primary-green);
+    font-size: 1rem;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-green);
+    color: white;
+    border-color: var(--primary-green);
+    font-weight: bold;
+}
+
+.filter-btn.active i {
+    color: white;
+}
+
+/* --- Course Grid and Cards --- */
+.course-grid {
+    display: grid;
+    /* Two columns with a gap */
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 30px;
+}
+
+.course-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* subtle shadow */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.course-card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--primary-green)
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.level {
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Specific colors for levels */
+.SOT { background-color: #069c30; } /* Lighter green/lime */
+.SOFP { background-color: #ad830f; } /* Orange/yellow */
+.SOCA { background-color: #b93e1c; } /* Coral/red */
+.SOA { background-color: #16459e; }
+.SOST { background-color: #8f1671; }
+
+
+.weeks {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+}
+
+.course-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.course-description {
+    font-size: 1rem;
+    color: var(--text-medium);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    /* Ensures equal height for the main content area */
+    flex-grow: 1; 
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid var(--card-border);
+}
+
+.available {
+    font-size: 0.9rem;
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.register-btn {
+    padding: 8px 18px;
+    background-color: var(--secondary-yellow);
+    color: var(--text-dark); /* Using dark text on yellow */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    font-size: 0.9rem;
+}
+
+.register-btn:hover {
+    background-color: #ffb700;
+}
+
+/* --- Can't Find Section --- */
+.cant-find-section {
+    margin-top: 60px;
+    padding: 50px 0;
+    text-align: center;
+    background-color: var(--background-light);
+    border-top: 1px solid var(--card-border);
+}
+
+.cant-find-section h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.cant-find-section p {
+    font-size: 1rem;
+    color: var(--text-medium);
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+}
+
+.early-access-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary-green);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.early-access-btn:hover {
+    background-color: #2e8b56;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 900px) {
+    .course-grid {
+        /* Switch to a single column on smaller screens */
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (max-width: 600px) {
+    .category-filter {
+        /* Allow buttons to stack */
+        justify-content: flex-start; 
+        gap: 10px;
+    }
+    .filter-btn {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+}
+}
+.course-card.hide {
+  display: none;
+}

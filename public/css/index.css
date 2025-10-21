@@ -1,0 +1,652 @@
+/* --- Variables and Global Reset --- */
+:root {
+    --primary-green: #388E3C; /* Darker Green */
+    --secondary-lime: #8BC34A; /* Brighter Green/Lime */
+    --accent-yellow: #FFC107; /* Yellow Accent */
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-light: #f9f9f9; /* FIX: Defined background light color */
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--bg-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    font-weight: 800;
+}
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+.subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+section {
+    padding: 80px 0;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-register, .btn-secondary {
+    background-color: var(--accent-yellow);
+    color: var(--text-dark);
+}
+.btn-register:hover, .btn-secondary:hover {
+    background-color: #ffda6a;
+}
+
+.btn-primary, .btn-learn-more {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.btn-primary:hover, .btn-learn-more:hover {
+    background-color: #2e7d32;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-learn-more {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: var(--radius);
+}
+
+.cou-cta {
+    background-color: var(--text-light);
+    color: var(--primary-green);
+    font-size: 1.1rem;
+    padding: 15px 35px;
+    border-radius: 12px;
+}
+.cou-cta:hover {
+    background-color: #eee;
+}
+
+.btn-cta {
+    background-color: var(--text-light);
+    color: var(--primary-green);
+    font-size: 1.1rem;
+    padding: 15px 35px;
+    border-radius: 12px;
+}
+.btn-cta:hover {
+    background-color: #eee;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: var(--text-light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    opacity: 80%;
+}
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo i {
+    color: var(--secondary-lime);
+    font-size: 1.5rem;
+}
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin: 0 15px;
+    padding: 5px 10px;
+    transition: color 0.1s;
+}
+
+/* ADDED: Base styles for menu toggle (hidden on desktop) */
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+/* .nav-link:active{
+background-color: green;   
+} */
+
+
+.nav-link.active {
+    background-color: green; 
+    color: var(--text-light);
+    border-radius: 50px;
+ }
+/* .nav-link:hover {
+    color: var(--primary-green);
+} */
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(180deg, var(--secondary-lime), var(--primary-green));
+    color: var(--text-light);
+    text-align: center;
+    padding: 100px 0 150px; /* Extra padding for the illustration effect */
+    position: relative;
+    overflow: hidden;
+    /* FIX: Reverted to original local path. If this fails, you may need to update the HTML to point to the uploaded image: uploaded:PBIDesktop_1exBDgHt3U.png-fd5aabe5-26c6-4058-b526-96b118764128 */
+    background-image: url('images/image 4.jpg') ; 
+    background-size: cover;
+    background-position: center bottom;
+}
+.hero-icon {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: var(--accent-yellow);
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+.hero-section h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    color: var(--text-light);
+}
+.hero-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: var(--text-light);
+    font-weight: 600;
+}
+.hero-section p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+}
+.hero-actions .btn {
+    margin: 0 10px;
+}
+
+/* --- Stats Section --- */
+.stats-section {
+    padding: 40px 0;
+    /* margin-top: -80px; /* Pulls it up into the hero section */
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 30px;
+}
+
+.card-container{
+    margin-top: -50px; /* Keep the overlap */
+    /* FIX: Adjusted margin-bottom to prevent massive layout shifts */
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #ffffff;
+    /* FIX: Invalid color() syntax replaced with a variable */
+    border: 1px solid var(--secondary-lime); 
+    border-radius: var(--radius); /* Added for consistency */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Added stronger shadow to container */
+}
+
+/* FIX: Renamed from .card to .stat-card to match the media query usage */
+.stat-card{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0.95;
+}
+
+/* FIX: Renamed from .card:hover to .stat-card:hover */
+.stat-card:hover {
+    transform: translateY(-5px); /* Lifts the card slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Makes the shadow more prominent on hover */
+    opacity: 1; /* Makes the card fully opaque on hover */
+}
+
+.fa-calendar-alt{
+    font-size: 3rem; /* Adjust icon size */
+    color: #138f03;
+    margin-bottom: 10px;
+    display: block; /* Ensures the icon is on its own line */
+}
+.fa-clock{
+    font-size: 3rem; /* Adjust icon size */
+    color: #c9b505;
+    margin-bottom: 10px;
+    display: block; /* Ensures the icon is on its own line */
+}
+.fa-users{
+    font-size: 3rem; /* Adjust icon size */
+    color: #138f03;
+    margin-bottom: 10px;
+    display: block; /* Ensures the icon is on its own line */
+}
+.fa-location-dot{
+    font-size: 1rem; /* Adjust icon size */
+    color: #c9b505;
+    margin-bottom: 10px;
+    display: block; /* Ensures the icon is on its own line */
+}
+
+
+/* --- About Section --- */
+.about-section {
+    background-color: var(--text-light);
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.about-image-col, .about-text-col {
+    flex: 1;
+}
+.about-image-col img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+}
+.about-text-col h2 {
+    text-align: left;
+    color: var(--primary-green);
+}
+.about-text-col p {
+    margin-bottom: 15px;
+}
+
+/* --- Skills Section --- */
+.skills-section {
+    text-align: center;
+    background-color: var(--bg-light);
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+.skill-card {
+    padding: 30px;
+    border-radius: var(--radius);
+    text-align: left;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.skill-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.skill-card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.skill-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+/* Card Colors based on screenshot */
+.skill-card.tech { background-color: #E8F5E9; color: var(--primary-green); }
+.skill-card.food { background-color: #FFF8E1; color: var(--text-dark); }
+.skill-card.media { background-color: #E8F5E9; color: var(--primary-green); }
+.skill-card.agro { background-color: #FFF8E1; color: var(--text-dark); }
+.skill-card.trade { background-color: #E8F5E9; color: var(--primary-green); }
+
+/* --- Speakers Section --- */
+.speakers-section {
+    text-align: center;
+}
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+.speaker-card {
+    text-align: center;
+    background: white;
+    border: 1px solid transparent;
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.speaker-card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--primary-green)
+}
+.speaker-initials {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+.speaker-initials.green { background-color: var(--primary-green); }
+.speaker-initials.yellow { background-color: var(--accent-yellow); color: var(--text-dark); }
+.speaker-card h4 {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.speaker-title {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- Timeline Section --- */
+.timeline-section {
+    background-color: var(--text-light);
+}
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+.timeline-card {
+    padding: 25px;
+    background-color: var(--bg-light);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-align: center;transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.timeline-card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(55, 255, 29, 0.432);
+    border: 1px solid var(--primary-green)
+}
+.timeline-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.timeline-card p {
+    font-size: 0.9rem;
+    color: var(--primary-green);
+}
+
+/* --- CTA Banner --- */
+.cta-banner {
+    background-image: linear-gradient(to right, #387b27, #f9e01f); 
+    color: var(--text-light);
+    text-align: center;
+    padding: 70px 0;
+}
+.cta-quote {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+.cta-text {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    padding-top: 50px;
+    position: relative;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer-col h3 {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.footer-desc {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+.social-icons a {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: var(--accent-yellow);
+}
+.footer-link a {
+    color: var(--text-light); /* Changed this from yellow to text-light for better contrast */
+    text-decoration: none;
+    line-height: 2.2;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+.footer-link a:hover{
+    color: var(--accent-yellow);
+}
+.footer-col ul {
+    list-style: none;
+}
+.footer-col ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    line-height: 2.2;
+    font-size: 0.9rem;
+}
+.contact-info i {
+    margin-right: 10px;
+    color: var(--accent-yellow);
+}
+.contact-info p {
+    line-height: 2;
+    font-size: 0.9rem;
+}
+.footer-bottom {
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.scroll-to-top {
+    /* Critical: Makes it stay in the same place even when scrolling */
+    position: fixed; 
+    right: 25px; /* Adjust position from the right */
+    bottom: 25px; /* Adjust position from the bottom */
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-green); /* Use your theme color */
+    color: white;
+    border-radius: 50%;
+    display: flex; /* For centering the icon */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it's above other elements */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s; 
+}
+
+/* Class added by JavaScript when the user scrolls down */
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+.scroll-to-top:hover {
+    background-color: #689F38;
+}
+
+/* --- Responsive Adjustments (Based on mobile screenshot) --- */
+@media (max-width: 992px) {
+    /* --- UPDATED NAVBAR STYLES FOR MOBILE --- */
+    .nav-content {
+        flex-wrap: wrap; 
+    }
+    
+    .menu-toggle {
+        display: block; 
+    }
+
+    .nav-content nav {
+        display: none;
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Take full width */
+        order: 3; /* Ensure it appears below logo and button */
+        background-color: var(--text-light); /* Give it a background */
+        padding-bottom: 10px;
+        margin-top: 10px; /* Space it from the top row */
+    }
+
+    /* THIS IS THE FIX: Show the nav when .show-menu is added by JS */
+    .nav-content nav.show-menu {
+        display: flex; 
+    }
+    
+    .nav-content nav .nav-link {
+        margin: 5px 20px;
+        text-align: center;
+    }
+
+    .nav-content nav .btn-register {
+        margin: 10px 20px;
+        text-align: center;
+    }
+    /* --- END OF NAVBAR FIX --- */
+
+
+    .hero-section h1 { font-size: 3rem; }
+    .hero-section h2 { font-size: 1.8rem; }
+    .stats-grid, .about-flex, .skills-grid, .speakers-grid, .timeline-grid, .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats-grid {
+        padding: 20px;
+    }
+    .stat-card {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+    .stat-card:last-child {
+        border-bottom: none;
+    }
+    .about-image-col {
+        order: 2; /* Put text first on mobile */
+    }
+    .about-text-col {
+        order: 1;
+        text-align: center;
+    }
+    .about-text-col h2 {
+        text-align: center;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-grid {
+        text-align: center;
+    }
+    .contact-info p {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .scroll-to-top {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack skills on small phones */
+}
+}
+
+.u-logo{
+    width: 7em;
+    height: 7em;
+}
+.word-container{
+    display: flex;
+    justify-content: center;
+}
+@keyframes float {
+    0%{ transform: translateY(0);}
+    50%{ transform: translateY(-15px);}
+    100%{ transform: translateY(0);}
+}
+.year20{
+    display: inline;
+    background-color: #f7d260;
+    padding-left: 0.25em;
+    margin-right: 0;
+}
+.year25{
+    display: inline;
+    background-color: #F4C430;
+    padding-right: 0.25em;
+}
+.word-container span{
+    padding-top: -2em;
+}
+.h-logo{
+max-height: 35px;
+width: auto;
+display: block;
+}
+.spim{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image to Gallery</title>
+    <link rel="stylesheet" href="index.css"> 
+    <link rel="stylesheet" href="upload.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+     <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <a href="index.html"><img src="images/image 6.png" alt="home" class="h-logo"></a> </div>
+            
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <nav id="main-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="team.html" class="nav-link">Team</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="admin-login.html" class="nav-link active">Admin</a>
+                <a href="registration.html" class="btn btn-register">Register Now</a>
+            </nav>
+            </div>
+    </header>
+
+    <main class="upload-container">
+        <section class="upload-section">
+            <h1>Upload a New Empowerment Moment 📸</h1>
+            <p>Use this form to dynamically add a new image to the gallery page. New images will appear first.</p>
+
+            <form id="imageUploadForm" enctype="multipart/form-data"> 
+                
+                <div class="form-group">
+                    <label for="imageFile">1. Select Image File:</label>
+                    <input type="file" id="imageFile" name="imageFile" accept="image/*" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="imageCaption">2. Image Caption:</label>
+                    <input type="text" id="imageCaption" name="imageCaption" required placeholder="e.g., Advanced Coding Workshop">
+                </div>
+                
+                <div class="form-group">
+                    <label for="imageCategory">3. Category (space-separated):</label>
+                    <input type="text" id="imageCategory" name="imageCategory" required placeholder="e.g., training tech">
+                    <small>These tags are used for filtering in the gallery.</small>
+                </div>
+                
+                <button type="submit" class="btn btn-upload">Upload to Gallery</button>
+                
+                <p id="uploadMessage" class="message-area"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        </footer>
+    
+
+    <script src="script.js"></script>
+    <script src="upload.js"></script>
+</body>
+</html>

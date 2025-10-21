@@ -1,0 +1,218 @@
+body {
+    background-color: #f7f7f7; /* Light off-white background */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    justify-content: center;
+}
+
+.registration-page {
+    width: 100%;
+    max-width: 50%;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 0 0 20px 20px;
+}
+
+:root {
+    --primary-green: #387b27;
+    --light-green: #6edb5c;
+    --yellow-bg: #ffcc00;
+    --border-color: #ddd;
+    --error-red: #cc0000;
+}
+
+.header-section {
+    text-align: center;
+    padding: 30px 0 10px;
+}
+
+.rocket-icon {
+    font-size: 2em;
+    margin-bottom: 5px;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+.header-section h1 {
+    font-size: 1.8em;
+    font-weight: 900;
+    color: #333;
+    margin: 0 0 5px;
+}
+
+.header-section p {
+    color: #666;
+    margin: 0 0 20px;
+    font-size: 0.9em;
+}
+
+.what-you-get-box {
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 20px;
+    width: 655px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.what-you-get-box h4 {
+    margin-top: 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+}
+
+.benefit-list li {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    color: #555;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Custom Checkmark (Uses the Unicode checkmark or a background image) */
+.benefit-list li::before {
+    content: '✓';
+    color: var(--primary-green); 
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.form-container {
+    border-top: 1px solid var(--border-color);
+    border-radius: 50px;
+    margin-bottom: 75px;
+}
+
+.form-header {
+    background-image: linear-gradient(to right, #387b27, #f9e01f); 
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.registration-form {
+    padding: 0 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Style for all input and select fields */
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"],
+.registration-form input[type="number"],
+.registration-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in the element's total width/height */
+    font-size: 1em;
+    color: #333;
+}
+
+.registration-form input::placeholder {
+    color: #aaa;
+}
+
+.important-info {
+    margin: 30px 0;
+}
+
+.important-info h4 {
+    font-size: 0.9em;
+    color: var(--error-red); /* Using a red color for emphasis */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.important-info ul {
+    list-style: disc; /* Use a standard disc bullet */
+    margin: 0;
+    padding-left: 20px;
+}
+
+.important-info li {
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+/* --- Submit Button --- */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #2e661f;
+}
+
+/* --- Footer Note --- */
+.footer-note {
+    text-align: center;
+    font-size: 0.75em;
+    color: #888;
+    padding: 20px 20px 40px;
+    margin: 0;
+}
+
+@keyframes float {
+    0%{ transform: translateY(0);}
+    50%{ transform: translateY(-15px);}
+    100%{ transform: translateY(0);}
+}
+.motivation{
+    padding: 0 10px;
+    text-align: center;
+}
+textarea {
+  width: 100%;
+  height: 140px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  border: 1.5px solid #00733B;
+  background-color: #F7F7F7;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #333333;
+  resize: vertical;
+  transition: 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #FFD600;
+  box-shadow: 0 0 6px rgba(255, 214, 0, 0.4);
+}
