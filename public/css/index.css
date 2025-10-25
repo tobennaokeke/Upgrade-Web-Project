@@ -166,7 +166,7 @@ background-color: green;  
     position: relative;
     overflow: hidden;
     /* FIX: Reverted to original local path. If this fails, you may need to update the HTML to point to the uploaded image: uploaded:PBIDesktop_1exBDgHt3U.png-fd5aabe5-26c6-4058-b526-96b118764128 */
-    background-image: url(/public/images/image\ 4.jpg);
+    background-image: url(../images/image\ 4.jpg);
     background-size: cover;
     background-position: center bottom;
 }
