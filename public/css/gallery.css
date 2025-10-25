@@ -94,13 +94,16 @@ body {
 .media-wrapper {
     position: relative;
     width: 100%;
-    /* Use padding-top for a 4:3 or 16:9 aspect ratio if needed, or simply let image define height */
+    padding-top: 75%;
     overflow: hidden;
 }
 
 .media-wrapper img, .media-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     transition: transform 0.3s;
 }
@@ -112,7 +115,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(76, 175, 80, 0.7); /* Primary color overlay */
+    background: rgba(76, 175, 80, 0.7);
     color: var(--text-light);
     display: flex;
     justify-content: center;
@@ -174,16 +177,15 @@ body {
 /* --- Lightbox Modal Styling (CRITICAL FIX) --- */
 /* The ID used in your gallery.html is 'lightbox' */
 #lightbox { 
-    display: none; /*Starts hidden, JS shows it */
-    position: fixed; /* MUST be fixed to overlay the entire viewport */
-    z-index: 1000; /* MUST be high to appear above all other content */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Allows scrolling inside if content is huge */
-    background-color: rgba(0, 0, 0, 0.9); /* Dark background overlay */
-    /* Use flexbox to center content */
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
